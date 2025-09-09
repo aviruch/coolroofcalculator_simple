@@ -1,0 +1,67 @@
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CURRENCYTYPE ===========
+
+CurrencyType,
+    INR;                     !- Monetary Unit
+
+
+!-   ===========  ALL OBJECTS IN CLASS: COMPONENTCOST:LINEITEM ===========
+
+ComponentCost:LineItem,
+    Exterior Walls,          !- Name
+    ,                        !- Type
+    Construction,            !- Line Item Type
+    EWall_Construction,      !- Item Name
+    ,                        !- Object End Use Key
+    ,                        !- Cost per Each {$}
+    1000;                    !- Cost per Area {$/m2}
+
+ComponentCost:LineItem,
+    Roof,                    !- Name
+    ,                        !- Type
+    Construction,            !- Line Item Type
+    Roof_Construction,       !- Item Name
+    ,                        !- Object End Use Key
+    ,                        !- Cost per Each {$}
+    1500;                    !- Cost per Area {$/m2}
+
+!  Nikhil
+ComponentCost:LineItem,
+    Glass Cost,              !- Name
+    ,                        !- Type
+    Construction,            !- Line Item Type
+    Window_Construction,     !- Item Name
+    ,                        !- Object End Use Key
+    ,                        !- Cost per Each {$}
+    ###Glass_Cost;           !- Cost per Area {$/m2}
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: UTILITYCOST:TARIFF ===========
+
+UtilityCost:Tariff,
+    ElectricityCost,         !- Name
+    ElectricityPurchased:Facility,  !- Output Meter Name
+    kWh,                     !- Conversion Factor Choice
+    ,                        !- Energy Conversion Factor
+    ,                        !- Demand Conversion Factor
+    ,                        !- Time of Use Period Schedule Name
+    ,                        !- Season Schedule Name
+    ,                        !- Month Schedule Name
+    ,                        !- Demand Window Length
+    0;                       !- Monthly Charge or Variable Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: UTILITYCOST:CHARGE:SIMPLE ===========
+
+UtilityCost:Charge:Simple,
+    FlatEnergyCharge,        !- Name
+    ElectricityCost,         !- Tariff Name
+    totalEnergy,             !- Source Variable
+    Annual,                  !- Season
+    EnergyCharges,           !- Category Variable Name
+    ###C;                       !- Cost per Unit Value or Variable Name
+
+
+

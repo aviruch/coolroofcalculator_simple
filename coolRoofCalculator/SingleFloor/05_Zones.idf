@@ -1,0 +1,180 @@
+!-   ===========  ALL OBJECTS IN CLASS: GLOBALGEOMETRYRULES ===========
+
+
+GlobalGeometryRules,
+    LowerLeftCorner,         !- Starting Vertex Position
+    CounterClockWise,        !- Vertex Entry Direction
+    Relative;                !- Coordinate System
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
+
+
+Zone,
+    Zone,            !- Name
+    0,                       !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    ,                        !- Ceiling Height {m}
+    AutoCalculate,           !- Volume {m3}
+    AutoCalculate,           !- Floor Area {m2}
+    TARP,                    !- Zone Inside Convection Algorithm
+    ,                        !- Zone Outside Convection Algorithm
+    Yes;                     !- Part of Total Floor Area
+
+
+!-   ===========  ALL OBJECTS IN CLASS: BUILDINGSURFACE:DETAILED ===========
+
+
+BuildingSurface:Detailed,
+    Block1:Zone1_GroundFloor_0_0_0,  !- Name
+    Floor,                   !- Surface Type
+    Floor_Construction,    !- Construction Name
+    Zone,            !- Zone Name
+    Ground,                  !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    ###X,           !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    0,                       !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    ###X,           !- Vertex 3 Y-coordinate {m}
+    0,                       !- Vertex 3 Z-coordinate {m}
+    ###X,           !- Vertex 4 X-coordinate {m}
+    ###X,           !- Vertex 4 Y-coordinate {m}
+    0;                       !- Vertex 4 Z-coordinate {m}
+
+! North Wall
+BuildingSurface:Detailed,
+    Block1:Zone1_Wall_1_0_0, !- Name
+    Wall,                    !- Surface Type
+    EWall_Construction,         !- Construction Name
+    Zone,            !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    ###X,           !- Vertex 1 Y-coordinate {m}
+    0,                       !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    ###H1,                     !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    ###X,           !- Vertex 4 Y-coordinate {m}
+    ###H1;                     !- Vertex 4 Z-coordinate {m}
+
+! East Wall
+BuildingSurface:Detailed,
+    Block1:Zone1_Wall_2_0_0, !- Name
+    Wall,                    !- Surface Type
+    EWall_Construction,         !- Construction Name
+    Zone,            !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    0,                       !- Vertex 1 Z-coordinate {m}
+    ###X,           !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    ###X,           !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    ###H2,           !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    ###H1;                     !- Vertex 4 Z-coordinate {m}
+
+! South Wall
+BuildingSurface:Detailed,
+    Block1:Zone1_Wall_3_0_0, !- Name
+    Wall,                    !- Surface Type
+    EWall_Construction,         !- Construction Name
+    Zone,            !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    ###X,           !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    0,                       !- Vertex 1 Z-coordinate {m}
+    ###X,           !- Vertex 2 X-coordinate {m}
+    ###X,           !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    ###X,           !- Vertex 3 X-coordinate {m}
+    ###X,           !- Vertex 3 Y-coordinate {m}
+    ###H2,           !- Vertex 3 Z-coordinate {m}
+    ###X,           !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    ###H2;           !- Vertex 4 Z-coordinate {m}
+
+
+BuildingSurface:Detailed,
+    Block1:Zone1_Wall_4_0_0, !- Name
+    Wall,                    !- Surface Type
+    EWall_Construction,         !- Construction Name
+    Zone,            !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    ###X,           !- Vertex 1 X-coordinate {m}
+    ###X,           !- Vertex 1 Y-coordinate {m}
+    0,                       !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    ###X,           !- Vertex 2 Y-coordinate {m}
+    0,                       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    ###X,           !- Vertex 3 Y-coordinate {m}
+    ###H1,                     !- Vertex 3 Z-coordinate {m}
+    ###X,           !- Vertex 4 X-coordinate {m}
+    ###X,           !- Vertex 4 Y-coordinate {m}
+    ###H2;           !- Vertex 4 Z-coordinate {m}
+
+
+BuildingSurface:Detailed,
+    Block1:Zone1_Roof_5_0_0, !- Name
+    Roof,                    !- Surface Type
+    Roof_Construction,          !- Construction Name
+    Zone,            !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    ###H1,                     !- Vertex 1 Z-coordinate {m}
+    ###X,           !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    ###H2,           !- Vertex 2 Z-coordinate {m}
+    ###X,           !- Vertex 3 X-coordinate {m}
+    ###X,           !- Vertex 3 Y-coordinate {m}
+    ###H2,           !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    ###X,           !- Vertex 4 Y-coordinate {m}
+    ###H1;                     !- Vertex 4 Z-coordinate {m}
+

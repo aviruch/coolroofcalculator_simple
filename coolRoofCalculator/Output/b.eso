@@ -1,0 +1,43 @@
+Program Version,EnergyPlus, Version 8.8.0-7c3bbe4830, YMD=2018.01.13 15:07
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,6,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,3,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,11,ZONE_1 INTERNAL LIGHTING_LOAD,Lights Electric Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+67,11,ZONE_2 INTERNAL LIGHTING_LOAD,Lights Electric Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+88,11,ZONE_3 INTERNAL LIGHTING_LOAD,Lights Electric Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+109,11,ZONE_4 INTERNAL LIGHTING_LOAD,Lights Electric Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+130,11,ZONE_CORE INTERNAL LIGHTING_LOAD,Lights Electric Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+21,11,Electricity:Building [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+493,11,ElectricityNet:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+End of Data Dictionary
+1,NEW DELHI ANN HTG 99.6% CONDNS DB,  28.58,  77.20,   5.50, 216.00
+5,1
+6,3205233.109641488,0.0, 1,21, 1,10,59356.168697064604, 1,21,10,10
+67,3205233.1096414879,0.0, 1,21, 1,10,59356.16869706459, 1,21,10,10
+88,3205233.109641488,0.0, 1,21, 1,10,59356.168697064604, 1,21,10,10
+109,3205233.109641488,0.0, 1,21, 1,10,59356.168697064604, 1,21,10,10
+130,301067.56145083988,0.0, 1,21, 1,10,5575.32521205259, 1,21,10,10
+21,27702000.00003542,0.0, 1,21, 1,10,513000.00000065649, 1,21,10,10
+493,86518496.04695356,0.0, 1,21, 1,10,3365226.284053602, 1,21, 9,10
+1,NEW DELHI ANN CLG .4% CONDNS DB=>MWB,  28.58,  77.20,   5.50, 216.00
+5,1
+6,3205233.109641488,0.0, 6,21, 1,10,59356.168697064604, 6,21,10,10
+67,3205233.1096414879,0.0, 6,21, 1,10,59356.16869706459, 6,21,10,10
+88,3205233.109641488,0.0, 6,21, 1,10,59356.168697064604, 6,21,10,10
+109,3205233.109641488,0.0, 6,21, 1,10,59356.168697064604, 6,21,10,10
+130,301067.56145083988,0.0, 6,21, 1,10,5575.32521205259, 6,21,10,10
+21,27702000.00003542,0.0, 6,21, 1,10,513000.00000065649, 6,21,10,10
+493,75783618.1196546,0.0, 6,21, 1,10,1398410.5310261308, 6,21,15,60
+1,ANNUALSIM,  28.58,  77.20,   5.50, 216.00
+5,365
+6,1169910085.019136,0.0, 1, 1, 1,10,59356.168697064604, 1, 1,10,10
+67,1169910085.019136,0.0, 1, 1, 1,10,59356.16869706459, 1, 1,10,10
+88,1169910085.019136,0.0, 1, 1, 1,10,59356.168697064604, 1, 1,10,10
+109,1169910085.019136,0.0, 1, 1, 1,10,59356.168697064604, 1, 1,10,10
+130,109889659.92954922,0.0, 1, 1, 1,10,5575.32521205259, 1, 1,10,10
+21,10111230000.012913,0.0, 1, 1, 1,10,513000.00000065649, 1, 1,10,10
+493,23135847006.944219,0.0, 1, 1, 1,10,1770940.7660110929, 1,20, 9,10
+End of Data
+ Number of Records Written=          21

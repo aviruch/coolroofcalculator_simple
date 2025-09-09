@@ -1,0 +1,57 @@
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLEDICTIONARY ===========
+
+Output:VariableDictionary,
+    IDF,                     !- Key Field
+    Name;                    !- Sort Option
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:SURFACES:DRAWING ===========
+
+Output:Surfaces:Drawing,
+    DXF;                     !- Report Type
+
+Output:Surfaces:Drawing,
+    DXF,                     !- Report Type
+    RegularPolyline;         !- Report Specifications 1
+
+Output:Surfaces:Drawing,
+    DXF,                     !- Report Type
+    Triangulate3DFace;       !- Report Specifications 1
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:SUMMARYREPORTS ===========
+
+Output:Table:SummaryReports,
+    AllSummary,              !- Report 1 Name
+	AllMonthly;				!- Report 2 Name
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUTCONTROL:TABLE:STYLE ===========
+
+OutputControl:Table:Style,
+    XML,                    !- Column Separator
+    JtoKWH;                  !- Unit Conversion
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLE ===========
+
+Output:Variable,
+    *,                       !- Key Value
+    Lights Electric Energy,  !- Variable Name
+    Environment;             !- Reporting Frequency
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER ===========
+
+Output:Meter,
+    Electricity:Building,    !- Name
+    Annual;                  !- Reporting Frequency
+
+Output:Meter,
+    ElectricityNet:Facility, !- Name
+    Annual;                  !- Reporting Frequency
+

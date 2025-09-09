@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cool Roof Calculator</title>
+
+    <!-- Bootstrap core CSS -->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/business-frontpage.css' %}" rel="stylesheet">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Cool Roof Calculator for Sloped Roof</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}"> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="">Calculator</a>
+			  <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="{% url 'glossary' %}">Glossary
+			  </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+	<div class="row">
+	<div class="col-sm-6 my-4">
+    <div class="card">
+		<h4 class="card-title" align="center">Base Case</h4>
+		<div class="card-body">
+			<form class="form-horizontal" action="/insertdb/" method='POST'>{% csrf_token %}
+				<label class="control-label col-sm-4" for="WeatherFile">WeatherFile:</label>
+					<select name="WeatherFile"  width="40">
+					<option value="IND_Ahmedabad.426470_ISHRAE.epw">Ahmedabad </option>
+					<option value="IND_Akola.429340_ISHRAE.epw">Akola </option>
+					<option value="IND_Allahabad.424750_ISHRAE.epw">Allahabad </option>
+					<option value="IND_Amritsar.420710_ISHRAE.epw">Amritsar </option>
+					<option value="IND_Aurangabad.430140_ISHRAE.epw">Aurangabad </option>
+					<option value="IND_Bangalore.432950_ISHRAE.epw">Bangalore </option>
+					<option value="IND_Barmer.424350_ISHRAE.epw">Barmer </option>
+					<option value="IND_Belgaum.431980_ISHRAE.epw">Belgaum </option>
+					<option value="IND_Bhagalpur.424980_ISHRAE.epw">Bhagalpur </option>
+					<option value="IND_Bhopal.426670_ISHRAE.epw">Bhopal </option>
+					<option value="IND_Bhubneshwar.429710_ISHRAE.epw">Bhubneshwar </option>
+					<option value="IND_Bikaner.421650_ISHRAE.epw">Bikaner </option>
+					<option value="IND_Chennai-Madras.432790_ISHRAE.epw">Chennai</option>
+					<option value="IND_Chirtadurg.432330_ISHRAE.epw">Chirtadurg </option>
+					<option value="IND_Dehradun.421110_ISHRAE.epw">Dehradun </option>
+					<option value="IND_Dibrugarh.423140_ISHRAE.epw">Dibrugarh </option>
+					<option value="IND_Gorakhpur.423790_ISHRAE.epw">Gorakhpur </option>
+					<option value="IND_Guwahati.424100_ISHRAE.epw">Guwahati </option>
+					<option value="IND_Gwalior.423610_ISHRAE.epw">Gwalior </option>
+					<option value="IND_Hissar.421310_ISHRAE.epw">Hissar </option>
+					<option value="IND_Hyderabad.431280_ISHRAE.epw">Hyderabad </option>
+					<option value="IND_Imphal.426230_ISHRAE.epw">Imphal </option>
+					<option value="IND_Indore.427540_ISHRAE.epw">Indore </option>
+					<option value="IND_Jabalpur.426750_ISHRAE.epw">Jabalpur </option>
+					<option value="IND_Jagdelpur.430410_ISHRAE.epw">Jagdelpur </option>
+					<option value="IND_Jaipur.423480_ISHRAE.epw">Jaipur </option>
+					<option value="IND_Jaisalmer.423280_ISHRAE.epw">Jaisalmer </option>
+					<option value="IND_Jamnagar.427340_ISHRAE.epw">Jamnagar </option>
+					<option value="IND_Jodhpur.423390_ISHRAE.epw">Jodhpur </option>
+					<option value="IND_Jorhat.424230_ISHRAE.epw">Jorhat </option>
+					<option value="IND_Kolkata.428090_ISHRAE.epw">Kolkata </option>
+					<option value="IND_Kota.424520_ISHRAE.epw">Kota </option>
+					<option value="IND_Kurnool.432130_ISHRAE.epw">Kurnool </option>
+					<option value="IND_Lucknow.423690_ISHRAE.epw">Lucknow </option>
+					<option value="IND_Mangalore.432840_ISHRAE.epw">Mangalore </option>
+					<option value="IND_Mumbai.430030_ISHRAE.epw">Mumbai </option>
+					<option value="IND_Nagpur.428670_ISHRAE.epw">Nagpur </option>
+					<option value="IND_Nellore.432450_ISHRAE.epw">Nellore </option>
+					<option value="IND_New.Delhi.421820_ISHRAE.epw" selected>New Delhi </option>
+					<option value="IND_Panjim.431920_ISHRAE.epw">Panjim </option>
+					<option value="IND_Patna.424920_ISHRAE.epw">Patna </option>
+					<option value="IND_Pune.430630_ISHRAE.epw">Pune </option>
+					<option value="IND_Raipur.428750_ISHRAE.epw">Raipur </option>
+					<option value="IND_Rajkot.427370_ISHRAE.epw">Rajkot </option>
+					<option value="IND_Ramagundam.430860_ISHRAE.epw">Ramagundam </option>
+					<option value="IND_Ranchi.427010_ISHRAE.epw">Ranchi </option>
+					<option value="IND_Ratnagiri.431100_ISHRAE.epw">Ratnagiri </option>
+					<option value="IND_Raxaul.423820_ISHRAE.epw">Raxaul </option>
+					<option value="IND_Saharanpur.5217_ISHRAE.epw">Saharanpur </option>
+					<option value="IND_Shillong.425160_ISHRAE.epw">Shillong </option>
+					<option value="IND_Sholapur.431170_ISHRAE.epw">Sholapur </option>
+					<option value="IND_Sundernagar.8204_ISHRAE.epw">Sundernagar </option>
+					<option value="IND_Surat.428400_ISHRAE.epw">Surat </option>
+					<option value="IND_Tezpur.424150_ISHRAE.epw">Tezpur </option>
+					<option value="IND_Tiruchirapalli.433440_ISHRAE.epw">Tiruchirapalli </option>
+					<option value="IND_Trivandram.433710_ISHRAE.epw">Trivandram </option>
+					<option value="IND_Veraval.429090_ISHRAE.epw">Veraval </option>
+					<option value="IND_Vishakhapatnam.431500_ISHRAE.epw">Vishakhapatnam </option>
+					</select>
+				<p></p>
+				<p><label class="control-label col-sm-4" for="Area">Area:</label>
+					<input id="Area" type="number" name="Area" value="50" min="50" max="300">
+					<span class="add-on">m<sup>2</sup>
+					</span>
+				</p>
+
+				<p><label class="control-label col-sm-4" for="buildingtype">Building Type</label>
+					<select width="40" name="buildingtype">
+					<option value="residentialonlynight">Residential (Night Occupied) </option>
+					<option value="residentialallday" selected>Residential (24 Hrs Occupied)</option>
+					</select>
+				</p>
+				<p><label class="control-label col-sm-4" for="Orientation">Orientation:</label>
+          <input id="Orientation" type="number" name="Orientation" value ="90" min="0" max="360">
+        </p>
+				<p><label class="control-label col-sm-4" for="WWR">Window To Wall Ratio:</label>
+          <input id="WWR" type="number" step="0.1" name="WWR" value="0.3" min="0.1" max="0.9">
+        </p>
+				<p><label class="control-label col-sm-4" for="HVAC_Type">HVAC Type:</label>
+					<select width="40" name="HVAC_Type">
+						<option value="PTAC" selected>PTAC</option>
+						<option value="PTAC">SPLIT</option>
+					</select>
+        </p>
+		<p><label class="control-label col-sm-4" for="Slope_Angle">Slope Angle:</label>
+          <input id="Slope_Angle" type="number" step="0.1" name="Slope_Angle" value ="20" min="1" max="30">
+        </p>
+		<p><label class="control-label col-sm-4" for="Electricity">Electricity Rate:</label>
+          <input id="Electricity" type="number" step="0.1" name="Electricity" value ="6" min ="1">
+        </p>
+		<p><label class="control-label col-sm-4" for="RoofContruction">Roof Type:</label>
+			<select width="40" name="RoofContruction" >
+				<option value="Roof_1" selected>Uninsulated  Concrete Roof</option>
+				<option value="Roof_2" >   Insulated Concrete Roof (XPS= 25 mm)</option>
+				<option value="Roof_3"> Insulated Concrete Roof (XPS= 50 mm)</option>
+				<option value="Roof_4"> Insulated Concrete Roof (XPS= 75 mm)</option>
+			</select>
+		</p>
+		</div>
+			</div>
+		  </div>
+			
+			<!--Gif Loader-->
+			<!---->
+			<div class="col-sm-6 my-4">
+				<div class="card">
+					<h4 class="card-title" align="center">Normal Roof</h4>
+						<div class="card-body">
+							<label class="control-label col-lg-8" for="basecase">Normal Roof External Finish:</label>
+              <p><label class="control-label col-lg-7" for="SR_Base">Surface Reflectivity:</label>
+                <input id="SR_Base" type="number" step="0.1" name="SR_Base" value ="0.4" min="0.1" max="0.4">
+              </p>
+              <p><label class="control-label col-lg-7" for="IE_Base">Thermal Emissivity:</label>
+                <input id="IE_Base" type="number" step="0.1" name="IE_Base" value ="0.9" min="0.1" max="0.9">
+              </p>
+						</div>
+					<h4 class="card-title" align="center">Cool Roof</h4>
+							<div class="card-body">
+								<label class="control-label col-lg-8" for="proposedcase">Cool Roof External Finish:</label>
+                <p><label class="control-label col-lg-7" for="SR_Propose">Surface Reflectivity:</label>
+                  <input id="SR_Propose" type="number" step="0.1" name="SR_Propose" value ="0.9" min="0.4" max="0.9">
+                </p>
+                <p><label class="control-label col-lg-7" for="IE_Propose">Thermal Emissivity:</label>
+                  <input id="IE_Propose" type="number" step="0.1" name="IE_Propose" value ="0.9" min="0.1" max="0.9">
+                </p>
+							</div>
+				</div>
+			</div>
+		</div>
+    </div>
+			<div align="center" class="container-footer">
+				<input class="btn btn-primary" type="submit" value="Simulate" style="width:100px;" onclick="$('#loading').show();">
+			</div>
+			</form>
+		</div>
+	 </div>
+	 <div class="card-img-overlay centered-div" id="loading" style="display:None; text-align:center; padding-top: 150px;">
+	 <img src= "{% static 'img/loading.gif' %}" alt="" height="250" width="250" align="center"/>
+	 <p style="color:#581845;font-family:Georgia;font-size:300%;">Simulating!</p></div>
+	 <!--<div align="left|right|center|justify"> -->
+<!-- Footer -->
+	<p align="center"></a>.
+	</p>
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p align="center" class="m-0 text-center text-white">Copyright &copy; Plaksha University 2025</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript href="{% static 'css/bootstrap.min.css' %}" -->
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+	
+  </body>
+
+</html>

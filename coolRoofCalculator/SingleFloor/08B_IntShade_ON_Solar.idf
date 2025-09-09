@@ -1,0 +1,17 @@
+
+!-   ===========  ALL OBJECTS IN CLASS: WINDOWPROPERTY:SHADINGCONTROL ===========
+
+WindowProperty:ShadingControl,
+    INCIDENT SOLAR ON BLIND, !- Name
+    InteriorBlind,           !- Shading Type
+    Int_Blind_Cons,          !- Construction with Shading Name
+    OnIfHighSolarOnWindow,   !- Shading Control Type
+    ,                        !- Schedule Name
+    200,                     !- Setpoint {W/m2, W or deg C}
+    NO,                      !- Shading Control Is Scheduled
+    NO,                      !- Glare Control Is Active
+    ,                        !- Shading Device Material Name
+    FixedSlatAngle,          !- Type of Slat Angle Control for Blinds
+    ;                        !- Slat Angle Schedule Name
+
+

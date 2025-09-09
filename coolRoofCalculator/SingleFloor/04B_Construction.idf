@@ -1,0 +1,31 @@
+!-Generator IDFEditor 1.50
+!-Option SortedOrder
+
+!-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+!-      Use '!' comments if they need to be retained when using the IDFEditor.
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
+
+Construction,
+    Window_Construction,     !- Name
+    Testwindow;              !- Outside Layer
+
+Construction,
+    Int_Blind_Cons,          !- Name
+    Testwindow,              !- Outside Layer
+    BLIND;                   !- Layer 2
+
+Construction,
+    EWall_Construction,      !- Name
+    Plaster_mat,             !- Outside Layer
+    Brick,                   !- Layer 2
+    XPS INSULATION25,        !- Layer 3
+    Plaster_mat;             !- Layer 4
+
+Construction,
+    Floor_Construction,      !- Name
+    Plaster_mat,             !- Outside Layer
+    Concrete_mat,            !- Layer 2
+    Plaster_mat;             !- Layer 3
+

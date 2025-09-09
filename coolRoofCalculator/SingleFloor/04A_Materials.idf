@@ -1,0 +1,165 @@
+!-Generator IDFEditor 1.50
+!-Option SortedOrder
+
+!-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+!-      Use '!' comments if they need to be retained when using the IDFEditor.
+
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL ===========
+
+! Floor/Roof Screed- thickness 0.07
+Material,
+    Concrete_mat,            !- Name
+    Rough,                   !- Roughness
+    0.1,                     !- Thickness {m}
+    0.81,                    !- Conductivity {W/m-K}
+    977,                     !- Density {kg/m3}
+    830,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.65,                    !- Solar Absorptance
+    0.65;                    !- Visible Absorptance
+
+Material,
+    Plaster_mat,             !- Name
+    Rough,                   !- Roughness
+    0.015,                   !- Thickness {m}
+    0.16,                    !- Conductivity {W/m-K}
+    600,                     !- Density {kg/m3}
+    1000,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.5,                     !- Solar Absorptance
+    0.5;                     !- Visible Absorptance
+
+Material,
+    XPS INSULATION25,        !- Name
+    VeryRough,               !- Roughness
+    0.025,                   !- Thickness {m}
+    4.3239430E-02,           !- Conductivity {W/m-K}
+    91.30524,                !- Density {kg/m3}
+    836.8000,                !- Specific Heat {J/kg-K}
+    0.9000000,               !- Thermal Absorptance
+    0.5000000,               !- Solar Absorptance
+    0.5000000;               !- Visible Absorptance
+
+Material,
+    Cool Roof Membrane,      !- Name
+    Smooth,                  !- Roughness
+    0.0015,                  !- Thickness {m}
+    0.1600,                  !- Conductivity {W/m-K}
+    1121.2900,               !- Density {kg/m3}
+    1460.0000,               !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    ###SA,                   !- Solar Absorptance
+    0.7000;                  !- Visible Absorptance
+
+Material,
+    Roof Plaster,            !- Name
+    Rough,                   !- Roughness
+    0.012,                   !- Thickness {m}
+    0.88,                    !- Conductivity {W/m-K}
+    2800,                    !- Density {kg/m3}
+    896,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+Material,
+    Concrete Reinforced (2% Steel),  !- Name
+    MediumRough,             !- Roughness
+    0.152,                   !- Thickness {m}
+    2.5,                     !- Conductivity {W/m-K}
+    2400,                    !- Density {kg/m3}
+    1000,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.6;                     !- Visible Absorptance
+
+Material,
+    Radiant Barrier,         !- Name
+    Rough,                   !- Roughness
+    0.012,                   !- Thickness {m}
+    0.25,                    !- Conductivity {W/m-K}
+    900,                     !- Density {kg/m3}
+    1000,                    !- Specific Heat {J/kg-K}
+    0.2,                     !- Thermal Absorptance
+    0.3,                     !- Solar Absorptance
+    0.3;                     !- Visible Absorptance
+
+Material,
+    XPS INSULATION50,        !- Name
+    VeryRough,               !- Roughness
+    0.05,                    !- Thickness {m}
+    4.3239430E-02,           !- Conductivity {W/m-K}
+    91.30524,                !- Density {kg/m3}
+    836.8000,                !- Specific Heat {J/kg-K}
+    0.9000000,               !- Thermal Absorptance
+    0.5000000,               !- Solar Absorptance
+    0.5000000;               !- Visible Absorptance
+
+Material,
+    XPS INSULATION75,        !- Name
+    VeryRough,               !- Roughness
+    0.075,                   !- Thickness {m}
+    4.3239430E-02,           !- Conductivity {W/m-K}
+    91.30524,                !- Density {kg/m3}
+    836.8000,                !- Specific Heat {J/kg-K}
+    0.9000000,               !- Thermal Absorptance
+    0.5000000,               !- Solar Absorptance
+    0.5000000;               !- Visible Absorptance
+
+Material,
+    Brick,                   !- Name
+    MediumRough,             !- Roughness
+    0.152,                   !- Thickness {m}
+    2.1,                     !- Conductivity {W/m-K}
+    2100,                    !- Density {kg/m3}
+    1000,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.6;                     !- Visible Absorptance
+
+
+!-   ===========  ALL OBJECTS IN CLASS: WINDOWMATERIAL:SIMPLEGLAZINGSYSTEM ===========
+
+!  Nikhil
+!  Nikhil
+WindowMaterial:SimpleGlazingSystem,
+    Testwindow,              !- Name
+    ###GLASS_U_FACTOR,       !- U-Factor {W/m2-K}
+    ###GLASS_SHGC,           !- Solar Heat Gain Coefficient
+    ###GLASS_VT;             !- Visible Transmittance
+
+
+!-   ===========  ALL OBJECTS IN CLASS: WINDOWMATERIAL:BLIND ===========
+
+WindowMaterial:Blind,
+    BLIND,                   !- Name
+    HORIZONTAL,              !- Slat Orientation
+    0.025,                   !- Slat Width {m}
+    0.01875,                 !- Slat Separation {m}
+    0.001,                   !- Slat Thickness {m}
+    45.0,                    !- Slat Angle {deg}
+    0.1,                     !- Slat Conductivity {W/m-K}
+    0.0,                     !- Slat Beam Solar Transmittance
+    0.7,                     !- Front Side Slat Beam Solar Reflectance
+    0.7,                     !- Back Side Slat Beam Solar Reflectance
+    0.0,                     !- Slat Diffuse Solar Transmittance
+    0.7,                     !- Front Side Slat Diffuse Solar Reflectance
+    0.7,                     !- Back Side Slat Diffuse Solar Reflectance
+    0.0,                     !- Slat Beam Visible Transmittance
+    0.5,                     !- Front Side Slat Beam Visible Reflectance
+    0.5,                     !- Back Side Slat Beam Visible Reflectance
+    0.0,                     !- Slat Diffuse Visible Transmittance
+    0.5,                     !- Front Side Slat Diffuse Visible Reflectance
+    0.5,                     !- Back Side Slat Diffuse Visible Reflectance
+    0.0,                     !- Slat Infrared Hemispherical Transmittance
+    0.9,                     !- Front Side Slat Infrared Hemispherical Emissivity
+    0.9,                     !- Back Side Slat Infrared Hemispherical Emissivity
+    0.050,                   !- Blind to Glass Distance {m}
+    0.5,                     !- Blind Top Opening Multiplier
+    0.5,                     !- Blind Bottom Opening Multiplier
+    0.0,                     !- Blind Left Side Opening Multiplier
+    0.0,                     !- Blind Right Side Opening Multiplier
+    0,                       !- Minimum Slat Angle {deg}
+    180;                     !- Maximum Slat Angle {deg}
+

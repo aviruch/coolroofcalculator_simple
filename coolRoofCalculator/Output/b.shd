@@ -1,0 +1,274 @@
+Shadowing Combinations
+..Solar Distribution=FullExterior
+..In the following, only the first 10 reference surfaces will be shown.
+..But all surfaces are used in the calculations.
+==================================
+Surface=TEST_OVERHANG_N is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=1
+..Surface=N_WALL
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-TEST_OVERHANG_N is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=2
+..Surface=N_WALL
+..Surface=CORE_ROOF
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=TEST_OVERHANG_S is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=1
+..Surface=S_WALL
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-TEST_OVERHANG_S is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=2
+..Surface=S_WALL
+..Surface=CORE_ROOF
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=TEST_OVERHANG_E is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=1
+..Surface=E_WALL
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-TEST_OVERHANG_E is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=2
+..Surface=E_WALL
+..Surface=CORE_ROOF
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=TEST_OVERHANG_W is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=1
+..Surface=W_WALL
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-TEST_OVERHANG_W is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=2
+..Surface=W_WALL
+..Surface=CORE_ROOF
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=S_WALL is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=1
+..Surface=TEST_OVERHANG_S
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SOUTH_WINDOW
+==================================
+Surface=SOUTH_WINDOW is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_1_N is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_1_W is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_1_E is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_2_S is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_4_S is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_1_FLOOR is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_1_ROOF is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=E_WALL is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=1
+..Surface=TEST_OVERHANG_E
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=EAST_WINDOW
+==================================
+Surface=EAST_WINDOW is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_2_S is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_2_W is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_2_N is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_3_E is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_1_E is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_2_FLOOR is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_2_ROOF is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=N_WALL is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=1
+..Surface=TEST_OVERHANG_N
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=NORTH_WINDOW
+==================================
+Surface=NORTH_WINDOW is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_3_S is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_3_E is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_3_W is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_2_N is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_4_N is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_3_FLOOR is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_3_ROOF is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=W_WALL is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=1
+..Surface=TEST_OVERHANG_W
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=WEST_WINDOW
+==================================
+Surface=WEST_WINDOW is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_4_S is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_4_N is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_4_E is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_3_W is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_1_W is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_4_FLOOR is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=ZONE_4_ROOF is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_3_S is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_1_N is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_2_W is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=iz-ZONE_4_E is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=CORE_FLOOR is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=CORE_ROOF is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0

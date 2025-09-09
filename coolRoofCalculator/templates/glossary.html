@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cool Roof Calculator</title>
+	
+    <!-- Bootstrap core CSS -->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/business-frontpage.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Cool Roof Calculator for Sloped Roof</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'coolroofcalculator' %}">Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+			<li class="nav-item active">
+              <a class="nav-link" href="">Glossary
+			  <span class="sr-only">(current)</span>
+			  </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header with Background Image -->
+    <header class="business-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-black mt-4">Cool Roof Calculator</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="mt-4">Glossary</h2>
+          <p><strong>WeatherFile:</strong> This depicts the city in which the performance of the roof is being calculated. The appropriate city is to be selected from the dropdown that is displayed for this field. Weather files in .epw format from the EnergyPlus website shall be used for the simulations. (Note: In-case the required city is not specified in the list of the cities; select the closest city or a city with similar climate.)</p>
+          <p><strong>Area:</strong></p>
+		  <p><strong>Building Type:</strong><ul><li>Residential (AC only in night): A typical home with AC running only during the nights</li>
+			<li>Residential (AC all day): As the name suggests, a residence in which the AC is ON throughout a typical home with AC running only during the nightsday.</ul></p>
+          <p><strong>Orientation:</strong></p>
+		  <p><strong>Window To Wall Ratio:</strong></p>
+		  <p><strong>HVAC Type:</strong></p>
+		  <p><strong>Slope Angle:</strong></p>
+	      <p><strong>Electricity Rate:</strong></p>
+		  <p><strong>Roof Type:</strong></p>
+		  <p><strong>Surface Reflectivity:</strong></p>
+		  <p><strong>Thermal Emissivity:</strong></p>
+		  
+        </div>
+      </div>
+      <!-- /.row -->
+
+
+    </div>
+    <!-- /.container -->
+
+    <p align="center"></a>.
+	</p>
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p align="center" class="m-0 text-center text-white">Copyright &copy; Plaksha University 2025</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript href="{% static 'css/bootstrap.min.css' %}" -->
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+  </body>
+
+</html>

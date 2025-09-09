@@ -1,0 +1,151 @@
+!-Generator IDFEditor 1.50
+!-Option SortedOrder
+
+!-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+!-      Use '!' comments if they need to be retained when using the IDFEditor.
+
+
+!-   ===========  ALL OBJECTS IN CLASS: VERSION ===========
+
+! This IDF data has been post-processed by DesignBuilder to modify Compact HVAC data
+! You can find the original unmodified IDF data in Compact.idf in the same EnergyPlus folder
+! Version Identifier
+Version,
+    8.8.0;                   !- Version Identifier
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SIMULATIONCONTROL ===========
+
+! Do Zone Sizing Calculation
+! Do System Sizing Calculation
+! Do Plant Sizing Calculation
+! Run Simulation for Sizing Periods
+! Run Simulation for Weather File Run Periods
+SimulationControl,
+    Yes,                     !- Do Zone Sizing Calculation
+    Yes,                     !- Do System Sizing Calculation
+    No,                      !- Do Plant Sizing Calculation
+    No,                      !- Run Simulation for Sizing Periods
+    Yes,                     !- Run Simulation for Weather File Run Periods
+    Yes;                     !- Do HVAC Sizing Simulation for Sizing Periods
+
+
+!-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
+
+! Name
+! North Axis (deg)
+! Terrain
+! Loads Convergence Tolerance Value
+! Temperature Convergence Tolerance Value (deltaC)
+! Solar Distribution
+! Maximum Number of Warmup Days
+! Minimum Number of Warmup Days
+Building,
+    Building,                !- Name
+    ###ORIENT,                       !- North Axis {deg}
+    Suburbs,                 !- Terrain
+    0.04,                    !- Loads Convergence Tolerance Value
+    0.4,                     !- Temperature Convergence Tolerance Value {deltaC}
+    FullExterior,            !- Solar Distribution
+    25,                      !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SHADOWCALCULATION ===========
+
+! Calculation Method
+! Calculation Frequency
+! Maximum Figures in Shadow Overlap Calculations
+! Polygon Clipping Algorithm
+! Sky Diffuse Modeling Algorithm
+ShadowCalculation,
+    AverageOverDaysInFrequency,  !- Calculation Method
+    20,                      !- Calculation Frequency
+    15000,                   !- Maximum Figures in Shadow Overlap Calculations
+    SutherlandHodgman,       !- Polygon Clipping Algorithm
+    SimpleSkyDiffuseModeling;!- Sky Diffuse Modeling Algorithm
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SURFACECONVECTIONALGORITHM:INSIDE ===========
+
+! Algorithm
+SurfaceConvectionAlgorithm:Inside,
+    TARP;                    !- Algorithm
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SURFACECONVECTIONALGORITHM:OUTSIDE ===========
+
+! Algorithm
+SurfaceConvectionAlgorithm:Outside,
+    DOE-2;                   !- Algorithm
+
+
+!-   ===========  ALL OBJECTS IN CLASS: HEATBALANCEALGORITHM ===========
+
+! Algorithm
+! Surface Temperature Upper Limit (C)
+HeatBalanceAlgorithm,
+    ConductionTransferFunction,  !- Algorithm
+    2000;                    !- Surface Temperature Upper Limit {C}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONECAPACITANCEMULTIPLIER:RESEARCHSPECIAL ===========
+
+! Temperature Capacity Multiplier
+! Humidity Capacity Multiplier
+! Carbon Dioxide Capacity Multiplier
+! Generic Contaminant Capacity Multiplier
+ZoneCapacitanceMultiplier:ResearchSpecial,
+    1,                       !- Name
+    Zone,            !- Zone or ZoneList Name
+    1.0,                     !- Temperature Capacity Multiplier
+    1.0,                     !- Humidity Capacity Multiplier
+    ,                        !- Carbon Dioxide Capacity Multiplier
+    ;                        !- Generic Contaminant Capacity Multiplier
+
+
+!-   ===========  ALL OBJECTS IN CLASS: TIMESTEP ===========
+
+! Number of Timesteps per Hour
+Timestep,
+    6;                       !- Number of Timesteps per Hour
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CONVERGENCELIMITS ===========
+
+! Minimum System Timestep (minutes)
+! Maximum HVAC Iterations
+ConvergenceLimits,
+    1,                       !- Minimum System Timestep {minutes}
+    25;                      !- Maximum HVAC Iterations
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: RUNPERIOD ===========
+
+! Name
+! Begin Month
+! Begin Day of Month
+! End Month
+! End Day of Month
+! Day of Week for Start Day
+! Use Weather File Holidays and Special Days
+! Use Weather File Daylight Saving Period
+! Apply Weekend Holiday Rule
+! Use Weather File Rain Indicators
+! Use Weather File Snow Indicators
+! Number of Times Runperiod to be Repeated
+RunPeriod,
+    RunPeriodCoolRoof,       !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    12,                      !- End Month
+    31,                      !- End Day of Month
+    UseWeatherFile,          !- Day of Week for Start Day
+    No,                      !- Use Weather File Holidays and Special Days
+    Yes,                     !- Use Weather File Daylight Saving Period
+    Yes,                     !- Apply Weekend Holiday Rule
+    Yes,                     !- Use Weather File Rain Indicators
+    Yes,                     !- Use Weather File Snow Indicators
+    1;                       !- Number of Times Runperiod to be Repeated

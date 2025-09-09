@@ -1,0 +1,16 @@
+ ReadVarsESO
+ processing:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/a0146296-4464-4452-8a31-f857e66aa288/Proposed/b.rvi
+ input file:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/a0146296-4464-4452-8a31-f857e66aa288/Proposed/Output/b.eso
+ output file:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/a0146296-4464-4452-8a31-f857e66aa288/Proposed/Output/b.csv
+ getting all vars from:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/a0146296-4464-4452-8a31-f857e66aa288/Proposed/Output/b.eso
+  number variables requested for output=           3
+ ReadVars Run Time=00hr 00min  0.02sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/a0146296-4464-4452-8a31-f857e66aa288/Proposed/b.mvi
+ input file:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/a0146296-4464-4452-8a31-f857e66aa288/Proposed/Output/b.mtr
+ output file:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/a0146296-4464-4452-8a31-f857e66aa288/Proposed/Output/bMeter.csv
+ getting all vars from:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/a0146296-4464-4452-8a31-f857e66aa288/Proposed/Output/b.mtr
+  number variables requested for output=           2
+ ReadVars Run Time=00hr 00min  0.02sec
+ ReadVarsESO program completed successfully.

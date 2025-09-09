@@ -1,0 +1,7 @@
+
+Construction,
+    Roof_Construction,                    !- Name
+    Cool Roof Membrane,            !- Outside Layer
+    Roof Plaster,            !- Layer 2
+    Concrete Reinforced (2% Steel),  !- Layer 3
+    Gypsum Plasterboard";

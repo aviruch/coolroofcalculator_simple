@@ -1,0 +1,35 @@
+
+!- NEW DAYLIGHT Controls as there is change in new version 86
+
+
+!-   ===========  ALL OBJECTS IN CLASS: DAYLIGHTING:CONTROLS ===========
+
+!  Daylighting:Controls,
+!    Zone_DaylCtrl,         !- Name
+!    Zone,                  !- Zone Name
+!    SplitFlux,               !- Daylighting Method
+!    ,                        !- Availability Schedule Name
+!    Continuous,              !- Lighting Control Type
+!    0.3,                     !- Minimum Input Power Fraction for Continuous or ContinuousOff Dimming Control
+!    0.2,                     !- Minimum Light Output Fraction for Continuous or ContinuousOff Dimming Control
+!    1,                       !- Number of Stepped Control Steps
+!    1,                       !- Probability Lighting will be Reset When Needed in Manual Stepped Control
+!    Zone_DaylRefPt1,       !- Glare Calculation Daylighting Reference Point Name
+!    15,                      !- Glare Calculation Azimuth Angle of View Direction Clockwise from Zone y-Axis {deg}
+!    22,                      !- Maximum Allowable Discomfort Glare Index
+!    ,                        !- DElight Gridding Resolution {m2}
+!    Zone_DaylRefPt1,       !- Daylighting Reference Point 1 Name
+!    1,                       !- Fraction of Zone Controlled by Reference Point 1
+!    300;                     !- Illuminance Setpoint at Reference Point 1 {lux}
+
+!  Daylighting:ReferencePoint,
+!    Zone_DaylRefPt1,       !- Name
+!    Zone,                  !- Zone Name
+!    ###Z_DLC_X,               !- X-Coordinate of First Reference Point {m}
+!    ###Z_DLC_Y,               !- Y-Coordinate of First Reference Point {m}
+!    0.8;                     !- Z-Coordinate of Reference Point {m}
+
+  
+	
+	
+	

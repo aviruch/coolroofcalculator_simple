@@ -1,0 +1,49 @@
+!-   ===========  ALL OBJECTS IN CLASS: WINDOW ===========
+
+Window,
+    Winddow_East,            !- Name
+    Window_Construction,     !- Construction Name
+    Block1:Zone1_Wall_1_0_0, !- Building Surface Name
+    INCIDENT SOLAR ON BLIND, !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    ###Frame_D,                       !- Starting X Coordinate {m}
+    ###Win_Sill,                       !- Starting Z Coordinate {m}
+   ###Win_L,                       !- Length {m}
+    ###Win_H;                       !- Height {m}
+
+Window,
+    Winddow_West,            !- Name
+    Window_Construction,     !- Construction Name
+    Block1:Zone1_Wall_2_0_0, !- Building Surface Name
+    INCIDENT SOLAR ON BLIND, !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    ###Frame_D,                       !- Starting X Coordinate {m}
+    ###Win_Sill,                       !- Starting Z Coordinate {m}
+    ###Win_L,                       !- Length {m}
+    ###Win_H;                       !- Height {m}
+
+Window,
+    Winddow_North,           !- Name
+    Window_Construction,     !- Construction Name
+    Block1:Zone1_Wall_3_0_0, !- Building Surface Name
+    INCIDENT SOLAR ON BLIND, !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    ###Frame_D,                       !- Starting X Coordinate {m}
+    ###Win_Sill,                       !- Starting Z Coordinate {m}
+    ###Win_L,                       !- Length {m}
+    ###Win_H;                       !- Height {m}
+
+Window,
+    Winddow_South,           !- Name
+    Window_Construction,     !- Construction Name
+    Block1:Zone1_Wall_4_0_0, !- Building Surface Name
+    INCIDENT SOLAR ON BLIND, !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    ###Frame_D,                       !- Starting X Coordinate {m}
+    ###Win_Sill,                       !- Starting Z Coordinate {m}
+    ###Win_L,                       !- Length {m}
+    ###Win_H;                       !- Height {m}

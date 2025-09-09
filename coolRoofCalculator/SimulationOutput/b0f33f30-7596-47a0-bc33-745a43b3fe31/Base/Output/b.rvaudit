@@ -1,0 +1,16 @@
+ ReadVarsESO
+ processing:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/b0f33f30-7596-47a0-bc33-745a43b3fe31/Base/b.rvi
+ input file:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/b0f33f30-7596-47a0-bc33-745a43b3fe31/Base/Output/b.eso
+ output file:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/b0f33f30-7596-47a0-bc33-745a43b3fe31/Base/Output/b.csv
+ getting all vars from:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/b0f33f30-7596-47a0-bc33-745a43b3fe31/Base/Output/b.eso
+  number variables requested for output=           3
+ ReadVars Run Time=00hr 00min  0.02sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/b0f33f30-7596-47a0-bc33-745a43b3fe31/Base/b.mvi
+ input file:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/b0f33f30-7596-47a0-bc33-745a43b3fe31/Base/Output/b.mtr
+ output file:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/b0f33f30-7596-47a0-bc33-745a43b3fe31/Base/Output/bMeter.csv
+ getting all vars from:/home/jd/Bsrc_Projects/coolRoofCalculator/SimulationOutput/b0f33f30-7596-47a0-bc33-745a43b3fe31/Base/Output/b.mtr
+  number variables requested for output=           2
+ ReadVars Run Time=00hr 00min  0.02sec
+ ReadVarsESO program completed successfully.

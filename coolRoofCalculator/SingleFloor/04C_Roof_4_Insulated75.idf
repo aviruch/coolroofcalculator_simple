@@ -1,0 +1,7 @@
+Construction,
+    Roof_Construction,                    !- Name
+    Cool Roof Membrane,            !- Outside Layer
+    Roof Plaster,            !- Layer 2
+    XPS INSULATION75,              !- Layer 3
+    Concrete Reinforced (2% Steel),  !- Layer 4
+    Plaster_mat;
