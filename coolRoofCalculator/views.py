@@ -18,6 +18,12 @@ import uuid
 import os
 import sys
 import re
+from django.shortcuts import render
+#from .models import Base, Proposed
+import re
+
+
+
 DirPath = os.path.dirname(os.path.abspath(__file__))
 #disabling csrf (cross site request forgery)
 @csrf_exempt
@@ -105,60 +111,138 @@ def databaseinsert(BCoolingResult,BHeatingResult,PCoolingResult,PHeatingResult,A
     simpleformPropose_obj.save()
     return "Success"
 
+
+
+
+import re
+from django.shortcuts import render, get_object_or_404
+from .models import SimpleForm_Base, SimpleForm_Proposed
+
 def displayResult(request):
     Simulation_id_hex = request.GET.get('Simulation_id')
-    Simulation_code = re.sub('-','',Simulation_id_hex)
-    print (Simulation_code)
-    con = mysql.connector.connect(user='root',password='docnme@123',host='localhost',database='coolroof')
-    cur = con.cursor()
-    commandBase ="select * from coolRoofCalculator_simpleform_base where Userid ="+"'"+str(Simulation_code)+"'"
-    print (commandBase)
-    cur.execute(commandBase)
-    BResult = cur.fetchall()
-    commandPropose = "select * from coolRoofCalculator_simpleform_proposed where Userid ="+"'"+str(Simulation_code)+"'"
-    print (commandPropose)
-    cur.execute(commandPropose)
-    PResult = cur.fetchall()
-    cur.close()
-    Cost1 = BResult[0][5]
-    Cost2 = PResult[0][5]
-    Area = BResult[0][1]
-    BCoolingResult=[0,0,0,0,0,0,0,0,0,0,0,0]
-    PCoolingResult=[0,0,0,0,0,0,0,0,0,0,0,0]
-    BHeatingResult=[0,0,0,0,0,0,0,0,0,0,0,0]
-    PHeatingResult=[0,0,0,0,0,0,0,0,0,0,0,0]
-    j=0
-    for i in range (6,18):
-    	BHeatingResult[j]=BResult[0][i]
-    	PHeatingResult[j]=PResult[0][i]
-    	j=j+1
-    j=0
-    for i in range (18,30):
-    	BCoolingResult[j]=BResult[0][i]
-    	PCoolingResult[j]=PResult[0][i]
-    	j=j+1
-    TotalBCoolingEnergy=0
-    TotalBHeatingEnergy=0
-    TotalPCoolingEnergy=0
-    TotalPHeatingEnergy=0
-    for	i in range(12):
-    	TotalBCoolingEnergy = TotalBCoolingEnergy + BCoolingResult[i]
-    	TotalPCoolingEnergy=TotalPCoolingEnergy + PCoolingResult[i]
-    	TotalBHeatingEnergy =TotalBHeatingEnergy + BHeatingResult[i]
-    	TotalPHeatingEnergy=TotalPHeatingEnergy + PHeatingResult[i]
-    TotalEnergy=[TotalBCoolingEnergy,TotalPCoolingEnergy,TotalBHeatingEnergy,TotalPHeatingEnergy]
-    CoolingSavings = (TotalBCoolingEnergy - TotalPCoolingEnergy)
-    HeatingSavings = (TotalBHeatingEnergy - TotalPHeatingEnergy)
-    CoolingSavingperArea = float(CoolingSavings/Area)
-    HeatingSavingperArea = float(HeatingSavings/Area)
-    CoolingSavingsCost = float(Cost1*CoolingSavings)
-    HeatingSavingsCost=  float(Cost1*HeatingSavings)
-    OverallEnergySavings = (CoolingSavings-(-HeatingSavings))
-    overallAreaSavings = (CoolingSavingperArea-(-HeatingSavingperArea))
-    OverallCostSavings = (CoolingSavingsCost-(-HeatingSavingsCost))
-    return render(request, 'Linechart.html',{'BCool':BCoolingResult,'PCool':PCoolingResult,\
-    'BHeat':BHeatingResult,'PHeat':PHeatingResult,'CoolEnergy':CoolingSavings,'HeatEnergy':HeatingSavings,\
-    'OverallEnergy':OverallEnergySavings,'CoolEnergyArea':CoolingSavingperArea,\
-    'HeatEnergyArea':HeatingSavingperArea,'OverallEnergyArea':overallAreaSavings,\
-    'CostCooling':CoolingSavingsCost,'CostHeating':HeatingSavingsCost,\
-    'OverallCost':OverallCostSavings})
+    Simulation_code = re.sub('-', '', Simulation_id_hex)  # strip dashes
+    print(Simulation_code)
+
+    # Fetch results with ORM
+    BResult = get_object_or_404(SimpleForm_Base, Userid=Simulation_code)
+    PResult = get_object_or_404(SimpleForm_Proposed, Userid=Simulation_code)
+
+    Cost1 = BResult.ElectricityRate
+    Cost2 = PResult.ElectricityRate
+    Area = BResult.Area
+
+    # Monthly values from models
+    heating_fields = [
+        "Heating_Jan", "Heating_Feb", "Heating_March", "Heating_April",
+        "Heating_May", "Heating_June", "Heating_July", "Heating_August",
+        "Heating_Sept", "Heating_Oct", "Heating_Nov", "Heating_Dec"
+    ]
+
+    cooling_fields = [
+        "Cooling_Jan", "Cooling_Feb", "Cooling_March", "Cooling_April",
+        "Cooling_May", "Cooling_June", "Cooling_July", "Cooling_August",
+        "Cooling_Sept", "Cooling_Oct", "Cooling_Nov", "Cooling_Dec"
+    ]
+
+    BHeatingResult = [getattr(BResult, f) for f in heating_fields]
+    PHeatingResult = [getattr(PResult, f) for f in heating_fields]
+    BCoolingResult = [getattr(BResult, f) for f in cooling_fields]
+    PCoolingResult = [getattr(PResult, f) for f in cooling_fields]
+
+    # Totals
+    TotalBCoolingEnergy = sum(BCoolingResult)
+    TotalPCoolingEnergy = sum(PCoolingResult)
+    TotalBHeatingEnergy = sum(BHeatingResult)
+    TotalPHeatingEnergy = sum(PHeatingResult)
+
+    CoolingSavings = round(TotalBCoolingEnergy - TotalPCoolingEnergy,2)
+    HeatingSavings = round(TotalBHeatingEnergy - TotalPHeatingEnergy,2)
+
+    CoolingSavingperArea = round(CoolingSavings / Area,2)
+    HeatingSavingperArea = round(HeatingSavings / Area,2)
+
+    CoolingSavingsCost = round(Cost1 * CoolingSavings,2)
+    HeatingSavingsCost = round(Cost1 * HeatingSavings,2)
+
+    OverallEnergySavings = round(CoolingSavings + HeatingSavings,2)
+    overallAreaSavings = round(CoolingSavingperArea + HeatingSavingperArea,2)
+    OverallCostSavings = round(CoolingSavingsCost + HeatingSavingsCost,2)
+
+    return render(
+        request,
+        "Linechart.html",
+        {
+            "BCool": BCoolingResult,
+            "PCool": PCoolingResult,
+            "BHeat": BHeatingResult,
+            "PHeat": PHeatingResult,
+            "CoolEnergy": CoolingSavings,
+            "HeatEnergy": HeatingSavings,
+            "OverallEnergy": OverallEnergySavings,
+            "CoolEnergyArea": CoolingSavingperArea,
+            "HeatEnergyArea": HeatingSavingperArea,
+            "OverallEnergyArea": overallAreaSavings,
+            "CostCooling": CoolingSavingsCost,
+            "CostHeating": HeatingSavingsCost,
+            "OverallCost": OverallCostSavings,
+        },
+    )
+
+
+# def displayResult(request):
+#     Simulation_id_hex = request.GET.get('Simulation_id')
+#     Simulation_code = re.sub('-','',Simulation_id_hex)
+#     print (Simulation_code)
+#     con = mysql.connector.connect(user='root',password='docnme@123',host='localhost',database='coolroof')
+#     cur = con.cursor()
+#     commandBase ="select * from coolRoofCalculator_simpleform_base where Userid ="+"'"+str(Simulation_code)+"'"
+#     print (commandBase)
+#     cur.execute(commandBase)
+#     BResult = cur.fetchall()
+#     commandPropose = "select * from coolRoofCalculator_simpleform_proposed where Userid ="+"'"+str(Simulation_code)+"'"
+#     print (commandPropose)
+#     cur.execute(commandPropose)
+#     PResult = cur.fetchall()
+#     cur.close()
+#     Cost1 = BResult[0][5]
+#     Cost2 = PResult[0][5]
+#     Area = BResult[0][1]
+#     BCoolingResult=[0,0,0,0,0,0,0,0,0,0,0,0]
+#     PCoolingResult=[0,0,0,0,0,0,0,0,0,0,0,0]
+#     BHeatingResult=[0,0,0,0,0,0,0,0,0,0,0,0]
+#     PHeatingResult=[0,0,0,0,0,0,0,0,0,0,0,0]
+#     j=0
+#     for i in range (6,18):
+#     	BHeatingResult[j]=BResult[0][i]
+#     	PHeatingResult[j]=PResult[0][i]
+#     	j=j+1
+#     j=0
+#     for i in range (18,30):
+#     	BCoolingResult[j]=BResult[0][i]
+#     	PCoolingResult[j]=PResult[0][i]
+#     	j=j+1
+#     TotalBCoolingEnergy=0
+#     TotalBHeatingEnergy=0
+#     TotalPCoolingEnergy=0
+#     TotalPHeatingEnergy=0
+#     for	i in range(12):
+#     	TotalBCoolingEnergy = TotalBCoolingEnergy + BCoolingResult[i]
+#     	TotalPCoolingEnergy=TotalPCoolingEnergy + PCoolingResult[i]
+#     	TotalBHeatingEnergy =TotalBHeatingEnergy + BHeatingResult[i]
+#     	TotalPHeatingEnergy=TotalPHeatingEnergy + PHeatingResult[i]
+#     TotalEnergy=[TotalBCoolingEnergy,TotalPCoolingEnergy,TotalBHeatingEnergy,TotalPHeatingEnergy]
+#     CoolingSavings = (TotalBCoolingEnergy - TotalPCoolingEnergy)
+#     HeatingSavings = (TotalBHeatingEnergy - TotalPHeatingEnergy)
+#     CoolingSavingperArea = float(CoolingSavings/Area)
+#     HeatingSavingperArea = float(HeatingSavings/Area)
+#     CoolingSavingsCost = float(Cost1*CoolingSavings)
+#     HeatingSavingsCost=  float(Cost1*HeatingSavings)
+#     OverallEnergySavings = (CoolingSavings-(-HeatingSavings))
+#     overallAreaSavings = (CoolingSavingperArea-(-HeatingSavingperArea))
+#     OverallCostSavings = (CoolingSavingsCost-(-HeatingSavingsCost))
+#     return render(request, 'Linechart.html',{'BCool':BCoolingResult,'PCool':PCoolingResult,\
+#     'BHeat':BHeatingResult,'PHeat':PHeatingResult,'CoolEnergy':CoolingSavings,'HeatEnergy':HeatingSavings,\
+#     'OverallEnergy':OverallEnergySavings,'CoolEnergyArea':CoolingSavingperArea,\
+#     'HeatEnergyArea':HeatingSavingperArea,'OverallEnergyArea':overallAreaSavings,\
+#     'CostCooling':CoolingSavingsCost,'CostHeating':HeatingSavingsCost,\
+#     'OverallCost':OverallCostSavings})

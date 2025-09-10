@@ -11,7 +11,7 @@
 ! You can find the original unmodified IDF data in Compact.idf in the same EnergyPlus folder
 ! Version Identifier
 Version,
-    8.8.0;                   !- Version Identifier
+    8.9.0;                   !- Version Identifier
 
 
 !-   ===========  ALL OBJECTS IN CLASS: SIMULATIONCONTROL ===========

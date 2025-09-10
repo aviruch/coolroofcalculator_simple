@@ -1,0 +1,19 @@
+Program Version,EnergyPlus, Version 8.9.0-40101eaafd, YMD=2025.09.10 10:20
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,1,Calendar Year of Simulation[] ! When Annual Report Variables Requested
+7,11,INTERNAL LIGHTING_LOAD,Lights Electric Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+24,11,Electricity:Building [J] !Annual [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+282,11,ElectricityNet:Facility [J] !Annual [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+End of Data Dictionary
+1,RUNPERIODCOOLROOF,  28.58,  77.20,   5.50, 216.00
+5,365
+7,7450380000.0,54000.00000000001, 1, 1, 1,10,243000.00000000004, 1, 1,19,10
+6,0
+24,15728580000.0,114000.00000000002, 1, 1, 1,10,513000.0000000001, 1, 1,19,10
+282,32220690064.705659,135433.12008771028, 1, 1, 1,10,1657419.5179842476, 6,10,19,10
+End of Data
+ Number of Records Written=           3

@@ -18,3 +18,9 @@ python MainFile.py 1000 IND_Ahmedabad.426470_ISHRAE.epw Office PTHP true false O
 
 Test case for Regular
 python MainFile.py 1000 IND_Ahmedabad.426470_ISHRAE.epw Office PTHP true false OnHighSolar 1 Regular 0.1 1 1 1 0.351 0.5 0.2 10 2 2 0 0
+
+
+http://127.0.0.1:8000/result/?Simulation_id=1e6ebb35-2a18-430d-9829-f7712c9b0cf3
+
+EnergyPlus v8.9
+

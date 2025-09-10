@@ -1,0 +1,16 @@
+ ReadVarsESO
+ processing:/home/ubuntu/rcrc/coolroofcalculator_simple/coolRoofCalculator/SimulationOutput/6411a3dd-d807-4f50-bb6d-709bbd09c063/Base/b.rvi
+ input file:/home/ubuntu/rcrc/coolroofcalculator_simple/coolRoofCalculator/SimulationOutput/6411a3dd-d807-4f50-bb6d-709bbd09c063/Base/Output/b.eso
+ output file:/home/ubuntu/rcrc/coolroofcalculator_simple/coolRoofCalculator/SimulationOutput/6411a3dd-d807-4f50-bb6d-709bbd09c063/Base/Output/b.csv
+ getting all vars from:/home/ubuntu/rcrc/coolroofcalculator_simple/coolRoofCalculator/SimulationOutput/6411a3dd-d807-4f50-bb6d-709bbd09c063/Base/Output/b.eso
+  number variables requested for output=           3
+ ReadVars Run Time=00hr 00min  0.01sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:/home/ubuntu/rcrc/coolroofcalculator_simple/coolRoofCalculator/SimulationOutput/6411a3dd-d807-4f50-bb6d-709bbd09c063/Base/b.mvi
+ input file:/home/ubuntu/rcrc/coolroofcalculator_simple/coolRoofCalculator/SimulationOutput/6411a3dd-d807-4f50-bb6d-709bbd09c063/Base/Output/b.mtr
+ output file:/home/ubuntu/rcrc/coolroofcalculator_simple/coolRoofCalculator/SimulationOutput/6411a3dd-d807-4f50-bb6d-709bbd09c063/Base/Output/bMeter.csv
+ getting all vars from:/home/ubuntu/rcrc/coolroofcalculator_simple/coolRoofCalculator/SimulationOutput/6411a3dd-d807-4f50-bb6d-709bbd09c063/Base/Output/b.mtr
+  number variables requested for output=           2
+ ReadVars Run Time=00hr 00min  0.01sec
+ ReadVarsESO program completed successfully.
